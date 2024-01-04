@@ -1,0 +1,23 @@
+i). How many times did the TCP algorithm reduce the cwnd, and why?
+For TCPCubic: 18 times
+For TCPNewReno:19 times
+
+The TCP algorithm is reducing the congestion window in order to reduce network congestion and to prevent further congestion. It is part of the congestion control mechanism.
+It reduces cwnd in following manner:
+Firstly,it detects the congestion through some indicators such as loss of packets.
+After detection, it reduces the size of the congestion window.
+After reducing the cwnd, it gradually  increases it check the vailable bandwidth.
+
+ii).Out of these two TCP variants which variant is better, and why?
+Out of given two TCP variants TCPCubic reduces cwnd by 18 times while TCPNewReno reduces the cwnd 19 times. It means that TCPCubic is reducing the cwnd more than that of TCPNewReno it means that it can improve throughput in high-speed networks. However, it may be more sensitive to packet loss.
+We can say that TCP Cubic is a better for high-speed networks with low packet loss rates and TCP NewReno is good for networks with variable packet loss rates.
+
+(iii). What happens to congestion window in following cases:
+a).Increase the link bandwidth
+The congestion window will also increase because TCP will be able to send more data.
+
+b).Increase the link delay
+Congestion window will decrease because it need to wait longer for the acknowledgements from the receiver.
+
+c).Increase the error-rate
+Congestion window will decrease because TCP willa ssume packet loss as a sign of congestion. So, it will reduce congestion window to avoid further congestions.
